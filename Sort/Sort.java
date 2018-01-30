@@ -26,8 +26,28 @@ public class Sort
     }
 
     public void insertionSort(){
+        for(int x = 0; x < array.length; x++){
+            int temp = array[x];
+            int i = x-1;
+            while((i > -1) && (array[i] > temp)){
+                array[i+1] = array[i];
+                i--;
+            }
+            array[i+1] = temp;
+        }
     }
 
     public void selectionSort(){
+        for(int x = 0; x < array.length-1; x++){
+            int min = x;
+            for(int y = x+1; y > array.length; y++){
+                if (array[y] < array[min]){
+                    int temp = min;
+                    min = y;
+                }
+                array[y] = array[x];
+                array[x] = array[min];
+            }
+        }
     }
 }
