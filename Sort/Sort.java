@@ -8,7 +8,7 @@
 
 public class Sort
 {
-    int[] array = {23, 12, 3, 9, 4, 7, 41, 45, 2, 12, 1};
+    int[] array = {23, 12, 3, 9, 4, 7, 41, 45, 2, 15, 1};
     public Sort(){
         // public constructor to access array
     }
@@ -39,15 +39,17 @@ public class Sort
 
     public void selectionSort(){
         for(int x = 0; x < array.length-1; x++){
-            int min = x;
-            for(int y = x+1; y > array.length; y++){
-                if (array[y] < array[min]){
-                    int temp = min;
+            int temp = array[x]; // stores current index
+            int min = x; // min index excluding sorted
+            for(int y = x; y < array.length; y++){
+                if(array[y] < array[min]){ 
+                    temp = array[x];
                     min = y;
                 }
-                array[y] = array[x];
-                array[x] = array[min];
             }
+            array[x] = array[min];
+            array[min] = temp;
         }
     }
+
 }
