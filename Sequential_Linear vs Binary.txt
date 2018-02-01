@@ -1,0 +1,14 @@
+Sequential/Linear
+	- iterate through list
+	- is it the element you need?
+	- takes lots of computing power!
+	- for loop, nested if-statement
+Binary
+	- large data sets
+	- RESTRICTION: the list/array MUST be IN ORDER 
+		- doesn't work w/out it
+	- while element not found
+		- go to middle index of unchecked values in list
+			- if element > index = eliminate all indices before
+			- if element < index = eliminate all indices after
+				- else = return index
